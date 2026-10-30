@@ -1,0 +1,32 @@
+# Dependencies and generated output
+node_modules/
+.next/
+/out/
+/dist/
+/coverage/
+*.tsbuildinfo
+.vercel/
+
+# Private configuration; commit only the blank setup template
+.env*
+!.env.example
+*.pem
+*.key
+
+# Local AI coding tools and working notes (not application source)
+.omp/
+.claude/
+.codex/
+.cursor/
+.aider*
+/AGENTS.md
+/CLAUDE.md
+/spec.md
+/IMPLEMENTATION_NOTES.md
+
+# Local editor, OS, and diagnostic artifacts
+.DS_Store
+.idea/
+*.log
+/playwright-report/
+/test-results/

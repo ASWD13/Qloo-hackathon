@@ -1,4 +1,4 @@
-// Run: NODE_OPTIONS=--conditions=react-server npx tsx --env-file-if-exists=.env scripts/evaluate-image-models.ts
+// Run: NODE_OPTIONS=--conditions=react-server npx tsx --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/evaluate-image-models.ts
 // --no-token uses anonymous ZeroGPU quota. Neither route purchases inference credits.
 import { ImageGenerationError, LiveHuggingFaceImageClient } from "../lib/huggingface/imageClient";
 

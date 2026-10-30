@@ -22,3 +22,7 @@ Before the redesign, manually selected Radiohead/A24/Muji, Bad Bunny/Fast & Furi
 Seeded inspiration remains illustrative and does not claim live Qloo verification. The same normalization/plan validation, controlled tool executor, streamed response contract, client transaction history and 3D renderer are used wherever applicable. Attribution and source details are available under **Why this room?**.
 
 Use the official HTTPS host assigned to your credentials. Production, staging and hackathon hosts are allowlisted. The wildcard is explicit free text for the planner, not an asserted verified Qloo entity. No tester-preference or cultural-uplift result is claimed.
+
+## Public submission smoke
+
+An unauthenticated browser at https://qloo-hackathon-five.vercel.app completed the normal questionnaire with Radiohead, A24 and Muji plus “I want a low-lying bed and warm lighting.” The result displayed a low platform bed and 2700 K light; **Why this room? → How it was made** identified **Live Qloo** context and adjacent artists. A subsequent “Keep everything but make the lighting warmer” refinement completed at 2400 K. This establishes an exercised public flow, not sustained availability or comparative design-quality uplift.

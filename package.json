@@ -2,6 +2,7 @@
   "name": "tastespace",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "engines": {
     "node": "22.x"
@@ -13,7 +14,7 @@
     "typecheck": "tsc --noEmit",
     "test": "node --conditions=react-server --import tsx --test tests/*.test.ts",
     "audit:assets": "tsx scripts/audit-assets.ts",
-    "inspect:qloo": "tsx --env-file-if-exists=.env scripts/inspect-qloo.ts",
+    "inspect:qloo": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/inspect-qloo.ts",
     "benchmark": "tsx scripts/benchmark-generation.ts"
   },
   "dependencies": {

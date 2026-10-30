@@ -27,6 +27,32 @@ Default model: [Black Forest Labs FLUX.2-klein-4B](https://huggingface.co/black-
 
 Actual authenticated 512×512 images were generated, downloaded and validated through both Spaces. Generated output remains ephemeral and is not relabeled as curated artwork. Paid inference-router implementations were removed; failed or disabled synthesis uses the original local assets listed above.
 
+Hosted image generation is optional: `HF_TOKEN` may be omitted for anonymous quota, `HF_IMAGE_MODEL` selects either supported model above, and `HF_GENERATE_TEXTURES=false` disables synthesis. Queues, quota limits and provider failures use curated local textures. No paid inference-router fallback is used.
+
+## Runtime software and external services
+
+The following direct runtime packages retain their upstream MIT licenses and notices. They are consumed as package distributions, not relicensed as original TasteSpace assets; exact versions and transitive packages are pinned in `package-lock.json`. Dependency license files remain in their installed packages.
+
+| Software | Maintainer / source | License | Modifications |
+|---|---|---|---|
+| Next.js | [Vercel and contributors](https://github.com/vercel/next.js) | MIT | No upstream source modifications |
+| React, React DOM and the `server-only` boundary marker | [React contributors](https://github.com/facebook/react) | MIT | No upstream source modifications |
+| React Three Fiber and Drei | [Poimandres: Fiber](https://github.com/pmndrs/react-three-fiber), [Drei](https://github.com/pmndrs/drei) | MIT | No upstream source modifications |
+| Three.js | [Three.js contributors](https://github.com/mrdoob/three.js) | MIT | No upstream source modifications |
+| Motion | [Motion contributors](https://github.com/motiondivision/motion) | MIT | No upstream source modifications |
+| Zod | [Colin McDonnell and contributors](https://github.com/colinhacks/zod) | MIT | No upstream source modifications |
+
+Hosted APIs are services, not bundled open-source model weights or assets:
+
+| Service / provider | Use | Applicable terms |
+|---|---|---|
+| Qloo API — Qloo | Server-side entity resolution and cross-category cultural recommendations; no Qloo images or data cache shipped | [Qloo terms](https://www.qloo.com/legal/terms-of-use) and the account/hackathon API agreement |
+| Gemini API — Google | Structured design planning, review and refinement; configurable model, default `gemini-3.1-flash-lite`; no model weights bundled | [Gemini API terms](https://ai.google.dev/gemini-api/terms) and [Google APIs terms](https://developers.google.com/terms) |
+| Hugging Face ZeroGPU Spaces — Hugging Face / Black Forest Labs | Optional runtime image generation using the two Apache-2.0 models listed above | [HF terms](https://huggingface.co/terms-of-service), [ZeroGPU usage](https://huggingface.co/docs/hub/en/spaces-zerogpu), and each model/Space's terms |
+| Vercel — Vercel | Hosting the public Next.js application; no hosting software is bundled as project assets | [Vercel terms](https://vercel.com/legal/terms) and deployment-plan limits |
+
+Provider credentials, account access, quota and usage rights remain the operator's responsibility. Runtime generation does not grant rights to third-party trademarks or copyrighted imagery. Artist, film and brand names are text taste references, not endorsements; no corresponding logos, album covers or film stills are bundled.
+
 ## Asset budget
 
-`npm run audit:assets` separates downloadable room files, fonts and uncompiled source. Current curated catalog: 25 SVG files, **9,346 bytes total**, largest **600 bytes**. Downloaded model files: **0 bytes**. Uncompiled room/catalog source is not a model-download or GPU-memory measurement. Exact runtime transfer and local loading observations are documented in README → Performance report.
+`npm run audit:assets` separates downloadable room files, fonts and uncompiled source. Current curated catalog: 25 SVG files, **9,346 bytes total**, largest **600 bytes**. Downloaded model files: **0 bytes**. Geometry and curated textures ship with the source; no separate asset download or generation step is needed. These file sizes exclude framework JavaScript, GPU memory and optional runtime-generated textures.
